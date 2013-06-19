@@ -1,0 +1,144 @@
+﻿<div class="hero-unit">
+    <h2>MVC4 Demo</h2>
+    <p>
+        This page is designed to demonstrate how minification and bundling can still be used when relative locations are used within
+        your CSS files.
+    </p>
+</div>
+<div class="row">
+    <div class="span4">
+        <h2>jQuery-UI</h2>
+        <ul class="icons clearfix">
+            <li><span class="ui-icon ui-icon-carat-1-n"></span></li>
+            <li><span class="ui-icon ui-icon-carat-1-ne"></span></li>
+            <li><span class="ui-icon ui-icon-carat-1-e"></span></li>
+            <li><span class="ui-icon ui-icon-carat-1-se"></span></li>
+            <li><span class="ui-icon ui-icon-carat-1-s"></span></li>
+            <li><span class="ui-icon ui-icon-carat-1-sw"></span></li>
+            <li><span class="ui-icon ui-icon-carat-1-w"></span></li>
+            <li><span class="ui-icon ui-icon-carat-1-nw"></span></li>
+            <li><span class="ui-icon ui-icon-carat-2-n-s"></span></li>
+            <li><span class="ui-icon ui-icon-carat-2-e-w"></span></li>
+            <li><span class="ui-icon ui-icon-triangle-1-n"></span></li>
+            <li><span class="ui-icon ui-icon-triangle-1-ne"></span></li>
+        </ul>
+        <ul class="icons clearfix">
+            <li><span class="ui-icon ui-icon-triangle-1-e"></span></li>
+            <li><span class="ui-icon ui-icon-triangle-1-se"></span></li>
+            <li><span class="ui-icon ui-icon-triangle-1-s"></span></li>
+            <li><span class="ui-icon ui-icon-triangle-1-sw"></span></li>
+            <li><span class="ui-icon ui-icon-triangle-1-w"></span></li>
+            <li><span class="ui-icon ui-icon-triangle-1-nw"></span></li>
+            <li><span class="ui-icon ui-icon-triangle-2-n-s"></span></li>
+            <li><span class="ui-icon ui-icon-triangle-2-e-w"></span></li>
+            <li><span class="ui-icon ui-icon-arrow-1-n"></span></li>
+            <li><span class="ui-icon ui-icon-arrow-1-ne"></span></li>
+            <li><span class="ui-icon ui-icon-arrow-1-e"></span></li>
+            <li><span class="ui-icon ui-icon-arrow-1-se"></span></li>
+        </ul>
+    </div>
+    <div class="span4">
+        <h2>Glyphicons</h2>
+        <ul class="icons clearfix">
+            <li><i class="icon-glass"></i></li>
+            <li><i class="icon-music"></i></li>
+            <li><i class="icon-search"></i></li>
+            <li><i class="icon-envelope"></i></li>
+            <li><i class="icon-heart"></i></li>
+            <li><i class="icon-star"></i></li>
+            <li><i class="icon-star-empty"></i></li>
+            <li><i class="icon-user"></i></li>
+            <li><i class="icon-film"></i></li>
+            <li><i class="icon-th-large"></i></li>
+            <li><i class="icon-th"></i></li>
+            <li><i class="icon-th-list"></i></li>
+        </ul>
+        <ul class="icons clearfix">
+            <li><i class="icon-ok"></i></li>
+            <li><i class="icon-remove"></i></li>
+            <li><i class="icon-zoom-in"></i></li>
+            <li><i class="icon-zoom-out"></i></li>
+            <li><i class="icon-off"></i></li>
+            <li><i class="icon-signal"></i></li>
+            <li><i class="icon-cog"></i></li>
+            <li><i class="icon-trash"></i></li>
+            <li><i class="icon-home"></i></li>
+            <li><i class="icon-file"></i></li>
+            <li><i class="icon-time"></i></li>
+            <li><i class="icon-road"></i></li>
+        </ul>
+    </div>
+    <div class="span4">
+        <h2>Font Awesome</h2>
+        <ul class="icons clearfix">
+            <li><i class="fw-icon-glass"></i></li>
+            <li><i class="fw-icon-music"></i></li>
+            <li><i class="fw-icon-search"></i></li>
+            <li><i class="fw-icon-envelope"></i></li>
+            <li><i class="fw-icon-heart"></i></li>
+            <li><i class="fw-icon-star"></i></li>
+            <li><i class="fw-icon-star-empty"></i></li>
+            <li><i class="fw-icon-user"></i></li>
+            <li><i class="fw-icon-film"></i></li>
+            <li><i class="fw-icon-th-large"></i></li>
+            <li><i class="fw-icon-th"></i></li>
+            <li><i class="fw-icon-th-list"></i></li>
+        </ul>
+        <ul class="icons clearfix">
+            <li><i class="fw-icon-ok"></i></li>
+            <li><i class="fw-icon-remove"></i></li>
+            <li><i class="fw-icon-zoom-in"></i></li>
+            <li><i class="fw-icon-zoom-out"></i></li>
+            <li><i class="fw-icon-off"></i></li>
+            <li><i class="fw-icon-signal"></i></li>
+            <li><i class="fw-icon-cog"></i></li>
+            <li><i class="fw-icon-trash"></i></li>
+            <li><i class="fw-icon-home"></i></li>
+            <li><i class="fw-icon-file"></i></li>
+            <li><i class="fw-icon-time"></i></li>
+            <li><i class="fw-icon-road"></i></li>
+        </ul>
+    </div>
+</div>
+<hr>
+<div class="row">
+    <div class="span12">
+        <h2>Explaination</h2>
+        <p>Picture the following bundle:</p>
+        <pre>bundles.Add(new StyleBundle("~/css/site").Include(
+    "~/Content/themes/base/jquery-ui.css"
+    "~/Content/fonts/font-awesome.css",
+    "~/Content/site.css"
+);
+        </pre>
+        <p>
+            In each css file is a relative references to various resources; maybe it's a font,
+            an image or even another css file for <code>@@import</code>. When these packages are
+            referenced during devlopment MVC will output each file separately. Example:
+        </p>
+        <pre>&lt;link href="/Content/themes/base/jquery-ui.css" rel="stylesheet"&gt;
+&lt;link href="/Content/fonts/font-awesome.css"rel="stylesheet"&gt;
+&lt;link href="/Content/site.css"rel="stylesheet"&gt;
+        </pre>
+        <p>
+            This allows the relative paths to resolve correctly because they are still originating
+            from where the file itself lives. For example, a reference of <code>url(images/foo.png)</code>
+            within the <b>site.css</b> file should resolve to <code>url(/Content/images/foo.png)</code>
+            (from the <code>/Content</code> directory, move to the <code>images</code> directory then locate
+            <code>foo.png</code>).
+        </p>
+        <p>
+            When the bundling is enabled, this changes the game; we no longer have files listed individually,
+            but instead they are compiled in to a single resource and output using the <code>virtualPath</code>
+            name we gave the bundle (in this case <code>~/css/site</code>). So, our output instead becomes
+            something along the lines of:
+        </p>
+        <pre>&lt;link href="/css/site?v=ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789 rel="stylesheet"&gt;</pre>
+        <p>
+            As you can see, all three CSS files have been consolodated in to one and published using the
+            <code>virtualPath</code> name, followed by a unique hash. But remember, our paths are still trying
+            to retrieve files using relative locations. So now what happens? <code>url(/Content/images/foo.png)</code>
+            we mentioned earlier is now trying to resolve to <code>url(/css/site/images/foo.png)</code>.
+        </p>
+    </div>
+</div>

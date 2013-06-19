@@ -1,0 +1,81 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>Bundle Builder MVC4 Demo</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    @System.Web.Optimization.Styles.Render("~/css/jquery")
+    @System.Web.Optimization.Styles.Render("~/css/bootstrap")
+    @System.Web.Optimization.Styles.Render("~/css/font-awesome")
+    <!--[if le IE 8]>@System.Web.Optimization.Styles.Render("~/css/font-awesome/ie7")<![endif]-->
+    <!--[if lt IE 9]>@System.Web.Optimization.Styles.Render("~/css/html5shiv")<![endif]-->
+    <style type="text/css">
+        body
+        {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        ul.icons
+        {
+            margin: 0;
+            padding: 0;
+        }
+
+            ul.icons li
+            {
+                cursor: pointer;
+                float: left;
+                list-style: none outside none;
+                margin: 2px;
+                padding: 4px 0;
+                position: relative;
+            }
+
+        .the-icons .span3 a, .the-icons .span3 a:hover
+        {
+            color: #222222;
+        }
+
+        .the-icons .span3 a
+        {
+            border-radius: 6px 6px 6px 6px;
+            cursor: pointer;
+            display: block;
+            height: 32px;
+            line-height: 32px;
+            padding-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-inner">
+            <div class="container">
+                <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="brand" href="#">BundleBuilder.UrlResolver</a>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        @RenderBody()
+        <footer>
+            <p>&copy; Company @DateTime.Today.Year</p>
+        </footer>
+    </div>
+    @System.Web.Optimization.Scripts.Render("~/js/jquery")
+    @System.Web.Optimization.Scripts.Render("~/js/bootstrap")
+</body>
+</html>
