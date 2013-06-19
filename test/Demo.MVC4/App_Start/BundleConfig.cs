@@ -26,7 +26,7 @@
             //
             bundles.Add(new StyleBundle("~/css/bootstrap").Include(
                 "~/Content/bootstrap.css",
-                "~/Content.bootstrap-responsive.css"
+                "~/Content/bootstrap-responsive.css"
             ).WithRelativePathResolution());
             bundles.Add(new ScriptBundle("~/js/bootstrap").Include(
                 "~/Scripts/bootstrap.js"
