@@ -1,4 +1,5 @@
-﻿using System.Web.Optimization;
+﻿using System;
+using System.Web.Optimization;
 
 namespace BundleBuilder.UrlResolver
 {
@@ -13,8 +14,12 @@ namespace BundleBuilder.UrlResolver
         /// </summary>
         /// <param name="bundle">Original bundle</param>
         /// <returns>Original bundle with the <see cref="UrlResolvingBundleBuilder"/> added.</returns>
-        public static StyleBundle WithRelativePathResolution(this StyleBundle bundle)
+        public static Bundle WithRelativePathResolution(this Bundle bundle)
         {
+            if (!(bundle is StyleBundle))
+            {
+                throw new ArgumentException("Expecting StyleBundle type", "bundle");
+            }
             bundle.Builder = new UrlResolvingBundleBuilder();
             return bundle;
         }
