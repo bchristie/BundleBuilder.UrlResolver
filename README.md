@@ -24,3 +24,11 @@ Versions
     * Fixed extension method to work on `Bundle` type (instead of specifically the `StyleBundle` type), however an exception will be thrown if the bundle is not a `StyleBundle`.
 * v1.0.0
     * Initial Release
+
+Support
+-------
+
+Want to help? You can promote the following items for me. ;-)
+
+* [Enable global ability to change the default BundleBuilder](https://aspnetoptimization.codeplex.com/workitem/53)
+* [Add support for versioning files in debug mode automatically](https://aspnetoptimization.codeplex.com/workitem/40)
