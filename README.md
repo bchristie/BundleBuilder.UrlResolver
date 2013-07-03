@@ -8,6 +8,8 @@ Example Usage
 
 Build your bundles (as usual) but append the `.WithRelativePathResolution()` helper to your bundle. Example:
 
+    using BundleBuilder.UrlResolver;
+
     bundles.Add(new StyleBundle("~/css/site").Include(
         "~/Content/themes/base/jquery-ui.css",
         "~/Content/bootstrap.css",
