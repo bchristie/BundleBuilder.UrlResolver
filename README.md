@@ -25,7 +25,7 @@ Personally I think they should have made this a built-in default, but to each hi
     /// <returns>Bundle.</returns>
     /// <exception cref="System.ArgumentException">Only available to StyleBundle;bundle</exception>
     /// <exception cref="System.ArgumentNullException">virtualPaths;Cannot be null or empty</exception>
-    public static Bundle IncludewithCssRewriteTransform(this Bundle bundle, params String[] virtualPaths)
+    public static Bundle IncludeWithCssRewriteTransform(this Bundle bundle, params String[] virtualPaths)
     {
         if (!(bundle is StyleBundle))
         {
