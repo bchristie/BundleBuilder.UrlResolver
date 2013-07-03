@@ -6,7 +6,7 @@ No Longer Necessary! (Here's Why)
 
 It appears that this issue has been [resolved](http://aspnetoptimization.codeplex.com/workitem/30) natively. You should now use the `CssRewriteUrlTransform` transformer when you build the bundle. e.g.
 
-    bundles.Add(new ScritpBundle("~/css/site")
+    bundles.Add(new ScriptBundle("~/css/site")
         .Include("~/Content/themes/base/jquery-ui.css", new CssRewriteUrlTransform())
         .Include("~/Content/bootstrap.css", new CssRewriteUrlTransform())
         .Include("~/Content/bootstrap-responsive.css", new CssRewriteUrlTransform())
@@ -16,7 +16,7 @@ It appears that this issue has been [resolved](http://aspnetoptimization.codeple
 Personally I think they should have made this a built-in default, but to each his/her own. However, you _can_ make the task easier using the following extension method:
 
     /// <summary>
-    /// Includes the specified <paramref name="virtualPaths"/> withint he bundle and attached the
+    /// Includes the specified <paramref name="virtualPaths"/> within the bundle and attached the
     /// <see cref="System.Web.Optimization.CssRewriteUrlTransform"/> item transformer to each item
     /// automatically.
     /// </summary>
