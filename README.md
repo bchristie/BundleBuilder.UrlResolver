@@ -6,7 +6,7 @@ No Longer Necessary! (Here's Why)
 
 It appears that this issue has been [resolved](http://aspnetoptimization.codeplex.com/workitem/30) natively. You should now use the `CssRewriteUrlTransform` transformer when you build the bundle. e.g.
 
-    bundles.Add(new ScriptBundle("~/css/site")
+    bundles.Add(new StyleBundle("~/css/site")
         .Include("~/Content/themes/base/jquery-ui.css", new CssRewriteUrlTransform())
         .Include("~/Content/bootstrap.css", new CssRewriteUrlTransform())
         .Include("~/Content/bootstrap-responsive.css", new CssRewriteUrlTransform())
@@ -48,7 +48,7 @@ Personally I think they should have made this a built-in default, but to each hi
     
 Which in turn makes the original code a little more concise:
 
-    bundles.Add(new ScritpBundle("~/css/site").IncludeWithCssRewriteTransform(
+    bundles.Add(new StyleBundle("~/css/site").IncludeWithCssRewriteTransform(
         "~/Content/themes/base/jquery-ui.css",
         "~/Content/bootstrap.css",
         "~/Content/bootstrap-responsive.css",
